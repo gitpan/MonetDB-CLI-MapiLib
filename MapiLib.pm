@@ -4,7 +4,7 @@ use MapiLib();
 use strict;
 use warnings;
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 
 sub connect
@@ -215,7 +215,7 @@ under the License.
 The Original Code is the MonetDB Database System.
 
 The Initial Developer of the Original Code is CWI.
-Portions created by CWI are Copyright (C) 1997-2005 CWI.
+Portions created by CWI are Copyright (C) 1997-2006 CWI.
 All Rights Reserved.
 
 =head1 SEE ALSO

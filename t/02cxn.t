@@ -11,7 +11,7 @@
 # The Original Code is the MonetDB Database System.
 #
 # The Initial Developer of the Original Code is CWI.
-# Portions created by CWI are Copyright (C) 1997-2005 CWI.
+# Portions created by CWI are Copyright (C) 1997-2006 CWI.
 # All Rights Reserved.
 
 $| = 1;
@@ -45,11 +45,11 @@ my $cnt = eval { $req->columncount };
 is( $cnt, 2,"columncount: $cnt");
 
 my $querytype = eval { $req->querytype };
-is( $querytype, 3,"querytype: $querytype");
+is( $querytype, 1,"querytype: $querytype");
 
 for my $k ('id','rows_affected') {
   my $v = eval { $req->$k };
-  ok( $v,"$k: $v");
+  ok( defined $v,"$k: $v");
 }
 for my $k ('name','type','length') {
   for my $i ( 0, 1 ) {
